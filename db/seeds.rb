@@ -61,27 +61,28 @@ end
 
 # Result(id: integer, user_id: integer, map_id: integer, score: integer, created_at: datetime, updated_at: datetime, checkpoints_visited: ) 
 
-result_seed =[
-["1", "1", "100"],
-["2", "1", "90"],
-["3", "1", "80"]
-]
+# result_seed =[
+# ["1", "1", "100"],
+# ["2", "1", "90"],
+# ["3", "1", "80"]
+# ]
 
-Result.delete_all
-result_seed.each do |user_id, map_id, score|
-	Result.create(user_id:user_id, map_id:map_id, score:score)
-end
+# Result.delete_all
+# result_seed.each do |user_id, map_id, score|
+# 	Result.create(user_id:user_id, map_id:map_id, score:score)
+# end
 
 
-user_seed =[
-["1", "jo@123.com", "12345678", "Jo Test"],
-["2", "jo@223.com", "22345678", "Jo Test 2"],
-["3", "jo@323.com", "32345678", "Jo Test 23"],
-["4", "jo@423.com", "42345678", "Unregistered User"]
-]
+# user_seed =[
+# ["1", "jo@123.com", "12345678", "Jo Test"],
+# ["2", "jo@223.com", "22345678", "Jo Test 2"],
+# ["3", "jo@323.com", "32345678", "Jo Test 23"],
+# ["4", "jo@423.com", "42345678", "Unregistered User"],
+# ["5", "jo@523.com", "42345678", "Unregistered User"]
+# ]
 
-User.destroy_all
-user_seed.each do |id, email, password, name|
-	User.create(id:id, email:email, password:password, name:name)
-end
+# User.destroy_all
+# user_seed.each do |id, email, password, name|
+# 	User.create(id:id, email:email, password:password, name:name)
+# end
 
