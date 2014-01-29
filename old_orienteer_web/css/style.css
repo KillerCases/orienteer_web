@@ -1,0 +1,600 @@
+/* 
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     margin: 0px;
+     padding: 0px;
+     font-family: "Helvetica Neue",'Snippet', 'Poiret One', Helvetica, Arial, sans-serif;
+     color: #7f7d78;
+     font-size: 13px;
+     line-height: 1.1;
+}
+
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+/* Center the container */
+.container {
+	width: 960px;
+	margin: 0 auto;
+     background:white;
+     display:block;
+}
+
+header {
+     height:55px;
+     background:black;
+}
+
+footer {
+     clear:all;
+     width:100%;
+     height:55px;
+     background:black;
+     display:block;
+     position: absolute;
+     top:120%;
+}
+
+
+
+/*----------------------------------------------------------------------------- 
+=03 GLOBAL STYLES 
+-----------------------------------------------------------------------------*/
+
+h1 {
+     margin: 0px 0px 10px 0px;
+     font-size: 42px;
+     font-weight:bold;
+     color: #000000;
+     line-height: 1.1;
+}
+
+
+h2 {
+     margin: 0px 0px 10px 0px;
+     font-size: 36px;
+     color: #000000;
+     line-height: 1.1;
+     font-weight:100;
+}
+
+h3 {
+     margin: 0px 0px 10px 0px;
+     font-size: 18px;
+     color: #000000;
+     line-height: 1.1;
+}
+
+
+a {
+     text-decoration:none;
+}
+
+p{
+     font-size:16px;
+     line-height:1.1;
+}
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+/******************************************
+/* NAVIGATION & FOOTER               
+/*******************************************/
+
+
+nav {
+     width: 100%;
+     display: block;
+     background:transparent;  
+     padding:0;
+     margin:0;
+}
+
+nav ul{
+     padding:0;
+     margin:0;
+     line-height:3;
+}
+
+nav ul li{
+     float: left;
+     display: inline;
+     margin-right:50px;
+     margin-left:0;
+     padding:0;
+}
+         
+nav li a{
+     display: block;
+     width: 100px;
+     color:#CCC;
+     text-align:left;
+     font-size:16px;   
+     padding:0;
+     margin:0; 
+}
+
+nav li a:hover{
+     color:white;
+}
+
+/******************************************
+/* PANEL                 
+/*******************************************/
+
+.panel{
+     width:100%;
+     height:40%;
+}
+
+.panel h1{
+     font-size:100px;
+}
+
+#text {
+     float:left;
+     display:block;
+     margin-top:50px;
+}
+
+/******************************************
+/* LOGO               
+/*******************************************/
+
+
+
+.logo{
+     border-left: 100px solid #00FF00;
+     border-right: 100px solid transparent;
+     border-top: 100px solid transparent;
+     border-bottom: 100px solid #00FF00; 
+     border-radius:5px;
+     height: 0;
+     width:0;
+     position: relative;
+     float:right;
+     margin:50px;
+}
+.logo:after{
+     content:"";
+     height: 200px;
+     width: 200px;
+     margin-left:-59px;
+     position:absolute;
+     margin-top:-3px;
+     border-left:8px solid black;
+     -webkit-transform:rotate(45deg);
+}
+/*
+.logo:before{
+     content:"N";
+     position:absolute;
+     top: -99px;
+     left: 58px;
+     font-size:50px;
+}*/
+
+.arrowTip{
+     border-right:8px solid black;
+     border-top:8px solid black;
+     height:40px;
+     width:40px;
+     position:absolute;
+     top: 47px;
+     left: 107px;
+}
+.outline{
+     border:3px solid #CCC;
+     border-radius: 5px;
+     height:200px;
+     width:200px;
+     display:block;
+     position:absolute;
+     z-index:1;
+     float:right;
+     left:-100px;
+     top:-100px;
+     box-shadow:#CCC 8px 8px 8px 2px;
+
+}
+
+/******************************************
+/* EMAIL BAR                
+/*******************************************/
+
+#emailBar{
+     display:block;
+     height:90px;
+     width:100%;
+     background:#F2F2F2;
+     clear:both;
+     padding:20px;
+}
+#enterText{
+     display:block;
+     float:left;
+     width:285px;
+     margin-right:50px;
+}
+#enterEmail form{
+     float:left;
+     margin-right:25px;
+     width:;
+}
+#enterEmail form input{
+     height:50px;
+     border-radius:5px;
+     border:2px solid #00FF00;
+     text-align:left;
+     padding:10px;
+}
+#getEmail{
+     display:block;
+     float:left;
+     background-image: -webkit-linear-gradient(bottom, #0F0, white); /* For Chrome and Safari */
+     border:2px solid #00FF00;
+     line-height: 1;
+     text-transform:uppercase;
+     text-align:center;
+     width:150px;
+     border-radius:5px;
+     color:black;
+     font-weight:bold;
+}
+
+#getEmail:hover{
+     background-image: -webkit-linear-gradient(bottom, #00e500, white);
+}
+
+/******************************************
+/* TRIBOX               
+/*******************************************/
+
+
+#triboxContainer{
+     width:960px;
+     clear:all;
+     height:350px;
+     padding-top:50px;
+     margin-bottom:50px;
+}
+.triBox{
+     height:300px;
+     width:306px;
+     border:2px solid #CCC;
+     border-radius:5px;
+     float:left;
+     margin-right:20px;
+}
+
+.triBox p{
+     padding:10px;
+}
+.nomargin{
+     margin:0;
+}
+
+.topBar{
+     height:50px;
+     width:100%;
+     background:black;
+     display:block;
+}
+.topBar h3{
+     color:white;
+     padding-top:10px;
+     padding-left:10px;
+}
+
+.triBox:hover{
+     border:2px solid #00FF00
+}
+.triBox:hover .topBar{
+     background-image: -webkit-linear-gradient(bottom, #00FF00, white); 
+}
+
+.triBox:hover .topBar h3{
+     color:black;
+}
+.triBox iframe{
+     width:301px;
+     height:246px;
+}
+
+#mobile img{
+     width:100%;
+     padding:10px 0 0 0;
+}
+
+#result img{
+     width:100%;
+     padding:30px 10px 0 10px;
+}
+
+/******************************************
+/* SOCIAL               
+/*******************************************/
+
+.social a {
+     float:right;
+     display:block;
+     height:55px;
+     width:55px;
+     text-decoration:none;
+     text-indent: 200%;
+     overflow:hidden;
+}
+
+.social ul li{
+     margin-right:0;
+     margin-left:10px;
+}
+
+.social{
+     width:150px;
+     float:right;
+}
+
+.links{
+     float:left;
+     width:300px;
+}
+
+.twitter:hover{
+     background:url('../images/socialNav.png') -67px 0px;
+}
+
+.twitter{
+     background:url('../images/socialNav.png') -67px 64px;
+}
+
+.facebook:hover{
+     background:url('../images/socialNav.png') -128px 0px;
+}
+
+.facebook{
+     background:url('../images/socialNav.png') -128px 64px;
+}
+
+
+/******************************************
+/* RESULTS               
+/*******************************************/
+
+#event{
+     height:50px;
+     width:400px;
+     display:block;
+     margin-top:50px;
+}
+
+#eventBox{
+     height:50px;
+     width:200px;
+     display:block;
+     background:#CCC;
+     float:left;
+     padding: 10px 10px 10px 10px;
+}
+
+#arrow{
+     width:10px;
+     height:10px;
+     border-top:10px solid #888;
+     border-left:10px solid #CCC;
+     border-right:10px solid #CCC;
+     border-bottom:10px solid #CCC;
+     margin: 20px 20px 20px 20px;
+     float:right;
+}
+
+#resultText{
+     margin-top:25px;
+}
+
+/******************************************
+/* PLAY                  
+/*******************************************/
+
+
+table{
+     width:100%;
+     line-height:2;
+     margin-top:50px;
+     margin-bottom:50px;
+}
+
+.gridtable {
+     border-width: 1px;
+     table-layout:fixed;
+     width:98%;
+
+}
+.gridtable td {
+     border-width: 1px;
+     padding: 1%;
+     border: 1px solid white;
+}
+
+.gridtable tr:nth-child(odd) {
+     background: #CCC ;
+}
+
+.gridtable th {
+     text-align:left;
+     border: 1px solid white;
+     background:white;
+     font-weight:bold;
+}
+
+
+
+/******************************************
+/* INSTRUCTION                 
+/*******************************************/
+#howPage{
+     display:block;
+     width:960px;
+     height:750px;
+}
+
+#instructionPanel{
+     display:block;
+     float:left;
+     width:500px;
+     height:750px;
+     padding-top:50px;
+     padding-bottom:50px;
+}
+#illustration{
+     display:block;
+     float:right;
+     width:400px;
+     height:625px;
+     margin-top:50px;
+     overflow:hidden;
+     border-radius:10px;
+     border:2px #CCC;
+}
+
+#illustration img{
+     width:100%;
+}
+
+#googlePlay img{
+     width:270px;
+
+}
+
+.instruction{
+     padding:10px;
+     display:block;
+     width:100%;
+     height:125px;
+     background:#F2F2F2;
+     border-bottom:1px solid #00FF00;
+     border-radius:5px;
+}
+
+.instruction:hover{
+     background-image: -webkit-linear-gradient(bottom, #00FF00, white); 
+}
+
+.instruction a{
+     color:#00FF00;
+     font-weight:bold;
+}
+
+#instructionText{
+     margin-top:25px;
+}
+
+
+/******************************************
+/* App Images               
+/*******************************************/
+#imagePanel{
+     display:block;
+     height:750px;
+     width:100%;
+     margin: 0 auto;
+     padding:50px;
+}
+#phoneImage img{
+     float:left;
+     height:697px;
+     width:375px;
+     display:block;
+}
+#badgeHolder{
+     float:right;
+     display:block;
+     height:750px;
+     width:50%;
+}
+
+#appstore img{
+     margin-top:20px;
+     width:270px;
+     height:80px;
+}
+#googleplay img{
+     margin-top:20px;
+     width:270px;
+}
+
+/******************************************
+/* ABOUT             
+/*******************************************/
+#aboutPanel{
+     height:700px;
+     padding-top:25px;
+     padding-bottom:25px;
+}
+
+.left{
+     float:none;
+     margin:0;
+}
+
+#aboutPanel p{
+     margin-top:25px;
+     margin-bottom:25px;
+}
+
+#aboutPanel p a{
+     color:#00FF00;
+     font-weight:bold;
+}
+
