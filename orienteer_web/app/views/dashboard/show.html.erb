@@ -1,0 +1,83 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Your description goes here">
+	<meta name="keywords" content="one, two, three">
+	
+	<title>orienteer.it</title>
+
+	<!-- external CSS link -->
+	<%= stylesheet_link_tag 'application' %>
+	<link rel="icon" type="image/png" href="assets/images/favicon.ico"></link>
+</head>
+<body>
+
+	<header>
+
+		<nav>
+			<div class='container'>
+				<ul>
+					<li><%= link_to 'Home', root_path %></li>
+					<li><%= link_to 'How it Works', how_path %></li>
+					<li><%= link_to 'Mobile App', mobile_path %></li>
+					<li><%= link_to 'Dashboard', user_root_path %></li>
+				</ul>
+					<li class ='user'>
+						<p>Welcome, <%= "#{current_user.email}" %></p>
+						<br>
+						<p><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></p>	
+					</li>
+					
+			</div><!--container-->
+			
+		</nav>
+	</header><!--header-->
+
+	<div class='container'>
+
+		<div class = 'resultTitle'>
+			<h2> <%= @map.name %></h2>
+		</div>
+
+		<div id = "resultPanel">
+			<img id = "resultMap" src=<%= @image_url %> alt="">
+		</div>
+
+		
+		<div class = 'resultTitle'>
+			<h2>Table of Results</h2>	
+		</div>
+		
+		<table class='gridtable'>
+
+			<thead>
+				<th>Name</th>
+				<th>Date</th>
+				<th>Score</th>
+				<th>Distance</th>
+				<th># of Checkpoints</th>
+			</thead>
+
+			
+			<tbody>
+				<% @results.each do |result| %>
+				<tr>
+					<td><%= result.user.name %></td>
+					<td><%= result.created_at %></td>
+					<td><%= result.score %></td>
+					<td><%= 'TBD' %></td>
+					<td><%= "TBD" %></td>
+				</tr>
+				<% end %>
+			</tbody>
+			
+
+		</table>
+
+	</div><!--container-->
+
+	<script type="text/javascript" src='lib/jquery-1.8.3.min.js'></script>
+	<script type="text/javascript" src='js/app.js'></script>
+
+</body>
+</html>

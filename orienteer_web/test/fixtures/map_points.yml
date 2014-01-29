@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  map_url: 1
+  checkpoint: 1
+  latitude: 9.99
+  longitude: 9.99
+  value: 1
+
+two:
+  map_url: 1
+  checkpoint: 1
+  latitude: 9.99
+  longitude: 9.99
+  value: 1
