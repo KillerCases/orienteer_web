@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  country: MyString
+  city: MyString
+  name: MyString
+  map_url: MyString
+  is_active: false
+
+two:
+  country: MyString
+  city: MyString
+  name: MyString
+  map_url: MyString
+  is_active: false
